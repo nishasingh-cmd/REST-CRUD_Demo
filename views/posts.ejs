@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>All Posts</h1>
+    <div class="container">
+        <% for(let post of posts) { %>
+             <div class="post">
+                <p class="id">ID: <%= post.id %></p>
+                <p class="username">@<%= post.username %></p>
+                <p class="content"><%= post.content %></p>
+                <a href="/posts/<%= post.id %>">See in detail</a>
+                &nbsp;  &nbsp;  &nbsp;
+                <a href="/posts/<%= post.id %>/edit">edit</a>
+                &nbsp;  &nbsp;  &nbsp;
+                <a href="">delete</a>
+            </div>
+        <% } %>
+        <a href="/posts/new">Add new post</a>
+    </div>
+</body>
+</html>
