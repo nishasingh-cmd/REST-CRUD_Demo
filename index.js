@@ -2,11 +2,12 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path")
-const { v4: uuidv4 } = require("uuid");
 //to generate random id
+const { v4: uuidv4 } = require("uuid");
+//to override HTTP verbs
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
-//to override HTTP verbs
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
@@ -75,6 +76,11 @@ app.patch("/posts/:id", (req, res) => {
    res.redirect("/posts")
 })
 //TO DELETE A POST
+app.delete("/posts/:id", (req, res)=> {
+   let { id } = req.params;
+   posts = posts.filter((p) => p.id !== id);
+   res.redirect("/posts");
+})
 app.listen(port, () => {
     console.log(`${port} is listening`)
 })

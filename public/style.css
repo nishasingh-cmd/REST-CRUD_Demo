@@ -1,39 +1,87 @@
 body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 20px;
-        }
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
 
-        .container {
-            max-width: 600px;
-            margin: auto;
-        }
+.container {
+    max-width: 600px;
+    margin: auto;
+}
 
-        .post {
-            background: #fff;
-            padding: 15px 20px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-        }
+.post {
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
-        .id {
-            font-size: 12px;
-            color: #888;
-        }
+.id {
+    font-size: 12px;
+    color: #888;
+}
 
-        .username {
-            font-weight: bold;
-            margin: 8px 0;
-        }
+.username {
+    font-weight: bold;
+    margin: 8px 0;
+    color: #555;
+}
 
-        .content {
-            color: #333;
-            line-height: 1.5;
-        }
+.content {
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+/* Buttons row */
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    color: #fff;
+}
+
+.btn.see {
+    background-color: #3498db;
+}
+
+.btn.edit {
+    background-color: #f1c40f;
+}
+
+.btn.delete {
+    background-color: #e74c3c;
+}
+
+.btn.add {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #2ecc71;
+}
+
+/* Hover effects */
+.btn:hover {
+    opacity: 0.85;
+}
+
+form {
+    display: inline; /* make delete form inline with other buttons */
+}

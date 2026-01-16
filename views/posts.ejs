@@ -14,14 +14,17 @@
                 <p class="id">ID: <%= post.id %></p>
                 <p class="username">@<%= post.username %></p>
                 <p class="content"><%= post.content %></p>
-                <a href="/posts/<%= post.id %>">See in detail</a>
-                &nbsp;  &nbsp;  &nbsp;
-                <a href="/posts/<%= post.id %>/edit">edit</a>
-                &nbsp;  &nbsp;  &nbsp;
-                <a href="">delete</a>
+
+                <div class="actions">
+                    <a class="btn see" href="/posts/<%= post.id %>">See</a>
+                    <a class="btn edit" href="/posts/<%= post.id %>/edit">Edit</a>
+                    <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+                        <button class="btn delete">Delete</button>
+                    </form>
+                </div>
             </div>
         <% } %>
-        <a href="/posts/new">Add new post</a>
+        <a class="btn add" href="/posts/new">Add New Post</a>
     </div>
 </body>
 </html>
